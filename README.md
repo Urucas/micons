@@ -2,6 +2,11 @@
 
 Node package to generate the sets of icons required by your mobile app. Supports Android & iOS. 
 
+Dependencies
+============
+
+<a href="https://www.npmjs.com/package/gm">https://www.npmjs.com/package/gm</a>
+
 Install
 =======
 npm install -g micons
