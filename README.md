@@ -21,3 +21,8 @@ Usage
 micons image_path output_path --android --ios
 
 ```
+
+Example
+=======
+
+<a href="https://github.com/Urucas/micons/tree/master/example">Simple example</a>
