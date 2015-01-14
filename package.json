@@ -1,14 +1,21 @@
 {
   "name": "micons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node package to generate the sets of icons required by your mobile app. Supports Android & iOS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/Urucas/micons.git"
+  },
+  "bin": {
+    "micons": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
   },
   "keywords": [
     "mobile",
@@ -17,6 +24,10 @@
     "icons",
     "android",
     "ios"
+  ],
+  "files": [
+    "index.js",
+    "cli.js"
   ],
   "author": "Urucas <hello@urucas.com>",
   "license": "MIT",
