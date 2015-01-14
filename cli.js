@@ -5,14 +5,25 @@ var fs = require('fs');
 var color = require('colors');
 
 var argv = process.argv.slice(2);
+
 var image_path = argv.shift();
+if(image_path == undefined) {
+  console.log("Image path not setted".red);
+  return;
+}
 
 if(!fs.existsSync(image_path)){
    console.log("Image not found".red+" -> "+image_path.white);
    return;
 }
+
 var output_path = argv.shift();
-if(!fs.existsSync(output_path)){
+if(output_path == undefined) {
+  console.log("Output path not setted".red);
+  return;
+}
+
+if(output_path == undefined || !fs.existsSync(output_path)){
    console.log("Output path not found".red+" -> "+output_path.white);
    return;
 }
