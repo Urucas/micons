@@ -1,10 +1,13 @@
 # micons - Mobile icons generator
 
-Node package to generate the sets of icons required by your mobile app. Supports Android & iOS. 
+Node package to generate the sets of icons required by your mobile app. The idea is to take a larger app icon(for ex. 512x512) and generate your mobile app icons for all the resolutions.
+
+Supports Android & iOS. 
 
 Dependencies
 ============
 
+micons uses gm, check it here:
 <a href="https://www.npmjs.com/package/gm">https://www.npmjs.com/package/gm</a>
 
 Install
