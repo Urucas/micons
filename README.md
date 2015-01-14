@@ -15,6 +15,6 @@ npm install -g micons
 Usage
 =====
 ```bash
-micons --image_path image_path --output_path output_path --android --ios
+micons image_path output_path --android --ios
 
 ```
