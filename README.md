@@ -22,6 +22,8 @@ micons image_path output_path --android --ios
 
 ```
 
+<img src="https://raw.githubusercontent.com/Urucas/micons/master/screenrec.gif" />
+
 Example
 =======
 
