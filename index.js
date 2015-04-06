@@ -26,6 +26,11 @@ module.exports = function(image_path, output_path, platforms, cb) {
     {id:'icon@2x', size: {w:114, h:114}}
   ];
 
+  var osx_icons = [
+    {id:'Icon', size: {w:22, h:22}},
+    {id:'icon@2x', size: {w:44, h:44}},
+  ];
+
   var android_icons = [
     {id:'drawable', size: {w:96, h:96}},
     {id:'drawable-hdpi', size: {w:72, h:72}},
@@ -34,6 +39,21 @@ module.exports = function(image_path, output_path, platforms, cb) {
     {id:'drawable-xhdpi', size: {w:96, h:96}},
     {id:'drawable-xxhdpi', size: {w:114, h:114}}
   ];
+
+  if(platforms.indexOf('osx') != -1) {
+    var output_folder = output_path + "/osx";
+    if(!fs.existsSync(output_folder)){
+      fs.mkdirSync(output_folder, '0755');
+    }
+    for(var i in osx_icons){
+      var icon = osx_icons[i];
+      var output = output_path + "/osx/"+icon.id+".png";
+      gm(image_path)
+      .thumb(icon.size.w, icon.size.h, output, quality, function(err){
+        if(err != undefined) console.log(err);
+      });
+    }
+  }
 
   if(platforms.indexOf('ios') != -1) {
     var output_folder = output_path + "/ios";
