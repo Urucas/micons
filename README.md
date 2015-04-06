@@ -1,8 +1,8 @@
 # micons - Mobile icons generator
 
-Node package to generate the sets of icons required by your mobile app. The idea is to take a larger app icon(for ex. 512x512) and generate your mobile app icons for all the resolutions.
+Node package to generate the sets of icons required by your app, mobile or desktop. The idea is to take a larger app icon(for ex. 512x512) and generate your app icons for all the resolutions in a single line.
 
-Supports Android & iOS. 
+Supports Android, iOS, OSX. 
 
 Dependencies
 ============
@@ -18,7 +18,7 @@ npm install -g micons
 Usage
 =====
 ```bash
-micons image_path output_path --android --ios
+micons image_path output_path --android --ios --osx
 
 ```
 

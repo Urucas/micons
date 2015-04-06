@@ -31,7 +31,7 @@ if(output_path == undefined || !fs.existsSync(output_path)){
 var platforms = [];
 if(argv.indexOf('--android') !== -1) platforms.push('android');
 if(argv.indexOf('--ios') !== -1) platforms.push('ios');
-if(argv.indexOf('--oxs') !== -1) platforms.push('osx');
+if(argv.indexOf('--osx') !== -1) platforms.push('osx');
 if(platforms.length == 0) {
    console.log("No platforms selected".red);
    return;
