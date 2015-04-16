@@ -6,6 +6,15 @@ module.exports = function(image_path, output_path, platforms, cb) {
   var quality = 100;
   var fs = require('fs');
 
+  if(!fs.existsSync(image_path)) {
+    cb(new Error("Image input path not found!"));
+    return;
+  }
+
+  if(platforms == undefined) {
+    platforms = ['android', 'ios', 'osx'];
+  }
+
   var ios_icons = [
     {id:'icon-40', size: {w:40, h:40}},
     {id:'icon-40@2x', size: {w:80, h:80}},
@@ -27,8 +36,8 @@ module.exports = function(image_path, output_path, platforms, cb) {
   ];
 
   var osx_icons = [
-    {id:'Icon', size: {w:22, h:22}},
-    {id:'icon@2x', size: {w:44, h:44}},
+    {id:'Icon', size: {w:14, h:14}},
+    {id:'icon@2x', size: {w:27, h:27}}
   ];
 
   var android_icons = [
@@ -89,5 +98,7 @@ module.exports = function(image_path, output_path, platforms, cb) {
       });
     }  
   }
+
+
 
 }
