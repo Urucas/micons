@@ -1,6 +1,6 @@
 {
   "name": "micons",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Node package to generate the sets of icons required by your mobile app. Supports Android & iOS.",
   "main": "index.js",
   "scripts": {

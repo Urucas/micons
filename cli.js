@@ -5,6 +5,15 @@ var fs = require('fs');
 var color = require('colors');
 
 var argv = process.argv.slice(2);
+if(argv.indexOf("--help") != -1 || argv.indexOf("-h") != -1) {
+
+  console.log([
+    "Usage",
+    "micons {image_path} {output_path} [--ios|--android|--osx]".green
+    ].join("\n")
+  );
+  return;
+}
 
 var image_path = argv.shift();
 if(image_path == undefined) {
